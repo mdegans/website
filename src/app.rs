@@ -1,3 +1,4 @@
+use crate::central;
 use crate::Navbar;
 
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
@@ -6,6 +7,8 @@ use crate::Navbar;
 pub struct Website {
     // Navbar
     navbar: Navbar,
+    // Central
+    central: central::Panel,
 }
 
 impl Website {
@@ -33,24 +36,8 @@ impl eframe::App for Website {
     }
 
     /// Called each time the UI needs repainting, which may be many times per second.
-    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        // Put your widgets into a `SidePanel`, `TopBottomPanel`, `CentralPanel`, `Window` or `Area`.
-        // For inspiration and more examples, go to https://emilk.github.io/egui
-
-        self.navbar.show(ctx);
-
-        egui::CentralPanel::default().show(ctx, |ui| {
-            // The central panel the region left after adding TopPanel's and SidePanel's
-            ui.heading("Michael de Gans");
-
-            ui.separator();
-
-            ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
-                ui.add(egui::github_link_file!(
-                    "https://github.com/mdegans/website/",
-                    "Source code."
-                ));
-            });
-        });
+    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+        self.navbar.update(ctx, frame);
+        self.central.update(ctx, frame, &mut self.navbar);
     }
 }
