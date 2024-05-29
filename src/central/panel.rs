@@ -9,6 +9,9 @@ pub struct Panel {
     /// Commonmark cache
     #[serde(skip)]
     commonmark_cache: CommonMarkCache,
+    /// Gallery of images
+    #[serde(skip)]
+    gallery: crate::gallery::Gallery,
 }
 
 impl Panel {
@@ -50,7 +53,11 @@ impl Panel {
         egui::ScrollArea::vertical().show(ui, |ui| {
             crate::common::about(ui, &mut self.commonmark_cache);
             crate::common::projects(ui, &mut self.commonmark_cache);
-            crate::common::hobbies(ui, &mut self.commonmark_cache);
+            crate::common::hobbies(
+                ui,
+                &mut self.commonmark_cache,
+                &mut self.gallery,
+            );
         });
     }
 }

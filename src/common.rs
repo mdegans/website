@@ -2,6 +2,8 @@
 
 use egui_commonmark::CommonMarkCache;
 
+use crate::gallery::{self, Gallery};
+
 /// Recent projects.
 pub fn projects(ui: &mut egui::Ui, commonmark_cache: &mut CommonMarkCache) {
     egui::CollapsingHeader::new("Projects")
@@ -85,11 +87,15 @@ pub fn about(ui: &mut egui::Ui, commonmark_cache: &mut CommonMarkCache) {
 }
 
 /// Hobbies outside of programming.
-pub fn hobbies(ui: &mut egui::Ui, commonmark_cache: &mut CommonMarkCache) {
+pub fn hobbies(
+    ui: &mut egui::Ui,
+    commonmark_cache: &mut CommonMarkCache,
+    gallery: &mut Gallery,
+) {
     egui::CollapsingHeader::new("Hobbies")
         .default_open(false)
         .show(ui, |ui| {
-            hobbies_inner(ui, commonmark_cache);
+            hobbies_inner(ui, commonmark_cache, gallery);
         })
         .header_response
         .on_hover_text_at_pointer("Hobbies outside programming.");
@@ -99,6 +105,7 @@ pub fn hobbies(ui: &mut egui::Ui, commonmark_cache: &mut CommonMarkCache) {
 pub fn hobbies_inner(
     ui: &mut egui::Ui,
     commonmark_cache: &mut CommonMarkCache,
+    gallery: &mut Gallery,
 ) {
     egui_commonmark::commonmark_str!(
         "Hobbies",
@@ -111,6 +118,7 @@ pub fn hobbies_inner(
         .default_open(false)
         .show(ui, |ui| {
             // TODO: Add a gallery of photos.
+            gallery.ui(ui);
         })
         .header_response
         .on_hover_text_at_pointer("Some of my photography.");

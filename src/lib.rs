@@ -3,6 +3,9 @@
 /// Central UI elements.
 pub(crate) mod central;
 
+/// Gallery of images for Photography section.
+pub(crate) mod gallery;
+
 /// Common content repeated across multiple pages.
 pub(crate) mod common;
 

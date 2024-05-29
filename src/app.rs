@@ -23,6 +23,8 @@ impl Website {
             style.url_in_tooltip = true;
         });
 
+        egui_thumbhash::register(&cc.egui_ctx);
+
         // Load previous app state (if any).
         // Note that you must enable the `persistence` feature for this to work.
         if let Some(storage) = cc.storage {
