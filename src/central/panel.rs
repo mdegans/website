@@ -1,8 +1,7 @@
-use std::any::Any;
-
+use egui::include_image;
 use egui_commonmark::CommonMarkCache;
 
-use crate::navbar::{self, tabs::Tab};
+use crate::navbar::{tabs::Tab, ICON_SIZE};
 
 /// Central panel
 #[derive(Default, serde::Serialize, serde::Deserialize)]
@@ -21,27 +20,37 @@ impl Panel {
     ) {
         egui::CentralPanel::default().show(ctx, |ui| {
             match navbar.selected_tab {
-                Tab::Home | Tab::Settings => self.draw_home(ui),
+                Tab::Info | Tab::Settings => self.draw_home(ui, navbar),
             }
         });
     }
 
-    pub fn draw_home(&mut self, ui: &mut egui::Ui) {
+    pub fn draw_home(&mut self, ui: &mut egui::Ui, navbar: &mut crate::Navbar) {
         // The central panel the region left after adding TopPanel's and SidePanel's
-        ui.heading("Michael de Gans");
+        ui.horizontal(|ui| {
+            ui.heading("Michael de Gans");
+            ui.with_layout(
+                egui::Layout::right_to_left(egui::Align::RIGHT),
+                |ui| {
+                    let menu_btn = egui::Button::image(include_image!(
+                        "../../assets/menu.svg"
+                    ))
+                    .frame(navbar.expanded);
+
+                    if ui.add_sized([ICON_SIZE, ICON_SIZE], menu_btn).clicked()
+                    {
+                        navbar.expanded = !navbar.expanded;
+                    }
+                },
+            );
+        });
 
         ui.separator();
 
         egui::ScrollArea::vertical().show(ui, |ui| {
+            crate::common::about(ui, &mut self.commonmark_cache);
             crate::common::projects(ui, &mut self.commonmark_cache);
-        });
-
-        ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
-            ui.add(egui::github_link_file!(
-                "https://github.com/mdegans/website/",
-                "Website source code."
-            ));
-            ui.separator();
+            crate::common::hobbies(ui, &mut self.commonmark_cache);
         });
     }
 }

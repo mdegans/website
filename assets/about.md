@@ -1,0 +1,1 @@
+I'm a software developer with a background in visual arts. I've worked in computer vision, machine learning, and robotics. I'm currently working on [a collaborative writing app](https://github.com/mdegans/weave) leveraging local and cloud-based language models.
