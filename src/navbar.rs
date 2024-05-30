@@ -23,6 +23,8 @@ impl Navbar {
         egui::SidePanel::new(Side::Right, "Navbar")
             .resizable(false)
             .show_animated(ctx, self.expanded, |ui| {
+                ui.add_space(6.0);
+
                 ui.horizontal(|ui| {
                     for tab in tabs::ALL {
                         if ui

@@ -1,700 +1,500 @@
 [
   {
-    "id": 0,
-    "title": "IMG_20200101_124335.jpg",
     "filename": "IMG_20200101_124335.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 1,
-    "title": "IMG_20200716_111357.jpg",
     "filename": "IMG_20200716_111357.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 2,
-    "title": "PXL_20231211_184959461.NIGHT_Original_TIFF.jpg",
     "filename": "PXL_20231211_184959461.NIGHT_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 3,
-    "title": "IMG_20191207_133228.jpg",
     "filename": "IMG_20191207_133228.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 4,
-    "title": "IMG_20200716_111342.jpg",
     "filename": "IMG_20200716_111342.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 5,
-    "title": "20240105_0489-HDR.jpg",
     "filename": "20240105_0489-HDR.jpg",
     "width": 1024,
     "height": 683
   },
   {
-    "id": 6,
-    "title": "PXL_20240511_063509859.NIGHT.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240511_063509859.NIGHT.RAW-02.ORIGINAL.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 7,
-    "title": "IMG_20200119_124216.jpg",
     "filename": "IMG_20200119_124216.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 8,
-    "title": "IMG_20191102_185553.jpg",
     "filename": "IMG_20191102_185553.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 9,
-    "title": "IMG_20200118_193633_1.jpg",
     "filename": "IMG_20200118_193633_1.jpg",
     "width": 1024,
     "height": 1023
   },
   {
-    "id": 10,
-    "title": "PXL_20231218_194553709.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "filename": "PXL_20231218_194553709.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "width": 1024,
     "height": 770
   },
   {
-    "id": 11,
-    "title": "IMG_20200716_112304.jpg",
     "filename": "IMG_20200716_112304.jpg",
     "width": 1024,
     "height": 720
   },
   {
-    "id": 12,
-    "title": "PXL_20210802_022209103.jpg",
     "filename": "PXL_20210802_022209103.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 13,
-    "title": "IMG_20191224_140006.jpg",
     "filename": "IMG_20191224_140006.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 14,
-    "title": "PXL_20240113_184145048.NIGHT.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240113_184145048.NIGHT.RAW-02.ORIGINAL.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 15,
-    "title": "PXL_20240511_062045624.NIGHT.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240511_062045624.NIGHT.RAW-02.ORIGINAL.jpg",
     "width": 1024,
     "height": 770
   },
   {
-    "id": 16,
-    "title": "DJI_0942-HDR-Pano.jpg",
     "filename": "DJI_0942-HDR-Pano.jpg",
     "width": 1024,
     "height": 288
   },
   {
-    "id": 17,
-    "title": "PXL_20240113_221336157.NIGHT.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240113_221336157.NIGHT.RAW-02.ORIGINAL.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 18,
-    "title": "PXL_20231211_185254621.NIGHT_Original_TIFF.jpg",
     "filename": "PXL_20231211_185254621.NIGHT_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 19,
-    "title": "PANO0003-3-Pano.jpg",
     "filename": "PANO0003-3-Pano.jpg",
     "width": 1024,
     "height": 288
   },
   {
-    "id": 20,
-    "title": "20240105_0859-HDR.jpg",
     "filename": "20240105_0859-HDR.jpg",
     "width": 683,
     "height": 1024
   },
   {
-    "id": 21,
-    "title": "IMG_20181104_170855.jpg",
     "filename": "IMG_20181104_170855.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 22,
-    "title": "PXL_20240106_192914643.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "filename": "PXL_20240106_192914643.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 23,
-    "title": "PXL_20240111_150152087.NIGHT.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240111_150152087.NIGHT.RAW-02.ORIGINAL.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 24,
-    "title": "_DSC0636-HDR-Pano.jpg",
     "filename": "_DSC0636-HDR-Pano.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 25,
-    "title": "IMG_20191127_131200.jpg",
     "filename": "IMG_20191127_131200.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 26,
-    "title": "IMG_20191207_141321.jpg",
     "filename": "IMG_20191207_141321.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 27,
-    "title": "IMG_20200102_141410.jpg",
     "filename": "IMG_20200102_141410.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 28,
-    "title": "IMG_20190209_104555-Pano.jpg",
     "filename": "IMG_20190209_104555-Pano.jpg",
     "width": 1024,
     "height": 288
   },
   {
-    "id": 29,
-    "title": "IMG_20200716_112403.jpg",
     "filename": "IMG_20200716_112403.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 30,
-    "title": "PXL_20231225_183209556.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "filename": "PXL_20231225_183209556.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "width": 1024,
     "height": 770
   },
   {
-    "id": 31,
-    "title": "_DSC0225-HDR-Pano.jpg",
     "filename": "_DSC0225-HDR-Pano.jpg",
     "width": 1024,
     "height": 288
   },
   {
-    "id": 32,
-    "title": "20240105_0375-HDR.jpg",
     "filename": "20240105_0375-HDR.jpg",
     "width": 1024,
     "height": 683
   },
   {
-    "id": 33,
-    "title": "PXL_20210802_022013034.jpg",
     "filename": "PXL_20210802_022013034.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 34,
-    "title": "PXL_20231120_162052947_Original_TIFF.jpg",
     "filename": "PXL_20231120_162052947_Original_TIFF.jpg",
     "width": 1024,
     "height": 769
   },
   {
-    "id": 35,
-    "title": "IMG_20191207_133114.jpg",
     "filename": "IMG_20191207_133114.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 36,
-    "title": "20240105_0259-HDR.jpg",
     "filename": "20240105_0259-HDR.jpg",
     "width": 1024,
     "height": 683
   },
   {
-    "id": 37,
-    "title": "IMG_20191207_133314.jpg",
     "filename": "IMG_20191207_133314.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 38,
-    "title": "PXL_20220803_173226632_Original_TIFF.jpg",
     "filename": "PXL_20220803_173226632_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 39,
-    "title": "PXL_20240511_062137483.NIGHT.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240511_062137483.NIGHT.RAW-02.ORIGINAL.jpg",
     "width": 1024,
     "height": 770
   },
   {
-    "id": 40,
-    "title": "IMG_20200124_112614.jpg",
     "filename": "IMG_20200124_112614.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 41,
-    "title": "IMG_20181101_165431.jpg",
     "filename": "IMG_20181101_165431.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 42,
-    "title": "20240105_0516-HDR.jpg",
     "filename": "20240105_0516-HDR.jpg",
     "width": 683,
     "height": 1024
   },
   {
-    "id": 43,
-    "title": "IMG_20200101_124624.jpg",
     "filename": "IMG_20200101_124624.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 44,
-    "title": "IMG_20200716_111322.jpg",
     "filename": "IMG_20200716_111322.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 45,
-    "title": "_DSC0248-Pano.jpg",
     "filename": "_DSC0248-Pano.jpg",
     "width": 1024,
     "height": 288
   },
   {
-    "id": 46,
-    "title": "20240105_0330-HDR.jpg",
     "filename": "20240105_0330-HDR.jpg",
     "width": 653,
     "height": 1024
   },
   {
-    "id": 47,
-    "title": "IMG_20190318_110444.jpg",
     "filename": "IMG_20190318_110444.jpg",
     "width": 1024,
     "height": 1023
   },
   {
-    "id": 48,
-    "title": "IMG_20191217_202655.jpg",
     "filename": "IMG_20191217_202655.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 49,
-    "title": "IMG_20200102_135708.jpg",
     "filename": "IMG_20200102_135708.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 50,
-    "title": "PXL_20240106_192833333.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "filename": "PXL_20240106_192833333.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 51,
-    "title": "IMG_20200102_141300.jpg",
     "filename": "IMG_20200102_141300.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 52,
-    "title": "IMG_20200716_114103.jpg",
     "filename": "IMG_20200716_114103.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 53,
-    "title": "IMG_20200716_112017.jpg",
     "filename": "IMG_20200716_112017.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 54,
-    "title": "PXL_20210804_033247783.jpg",
     "filename": "PXL_20210804_033247783.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 55,
-    "title": "IMG_20191217_202859.jpg",
     "filename": "IMG_20191217_202859.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 56,
-    "title": "IMG_20200101_124030.jpg",
     "filename": "IMG_20200101_124030.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 57,
-    "title": "IMG_20200716_112349.jpg",
     "filename": "IMG_20200716_112349.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 58,
-    "title": "PXL_20240103_203940545.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "filename": "PXL_20240103_203940545.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 59,
-    "title": "IMG_20190907_115635.jpg",
     "filename": "IMG_20190907_115635.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 60,
-    "title": "_DSC0234-HDR-Pano.jpg",
     "filename": "_DSC0234-HDR-Pano.jpg",
     "width": 1024,
     "height": 288
   },
   {
-    "id": 61,
-    "title": "IMG_20191207_141011.jpg",
     "filename": "IMG_20191207_141011.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 62,
-    "title": "IMG_20200716_114735.jpg",
     "filename": "IMG_20200716_114735.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 63,
-    "title": "PXL_20240111_165302332.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240111_165302332.RAW-02.ORIGINAL.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 64,
-    "title": "PXL_20240109_210837072.NIGHT.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240109_210837072.NIGHT.RAW-02.ORIGINAL.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 65,
-    "title": "IMG_20200716_112232.jpg",
     "filename": "IMG_20200716_112232.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 66,
-    "title": "20240105_0872-HDR-2.jpg",
     "filename": "20240105_0872-HDR-2.jpg",
     "width": 683,
     "height": 1024
   },
   {
-    "id": 67,
-    "title": "IMG_20200101_124759.jpg",
     "filename": "IMG_20200101_124759.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 68,
-    "title": "20240105_0869-HDR.jpg",
     "filename": "20240105_0869-HDR.jpg",
     "width": 683,
     "height": 1024
   },
   {
-    "id": 69,
-    "title": "DJI_0376-HDR-Pano.jpg",
     "filename": "DJI_0376-HDR-Pano.jpg",
     "width": 1024,
     "height": 288
   },
   {
-    "id": 70,
-    "title": "IMG_20190831_195153-Pano.jpg",
     "filename": "IMG_20190831_195153-Pano.jpg",
     "width": 1024,
     "height": 288
   },
   {
-    "id": 71,
-    "title": "IMG_20200716_114444.jpg",
     "filename": "IMG_20200716_114444.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 72,
-    "title": "PXL_20240111_141105408.NIGHT.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240111_141105408.NIGHT.RAW-02.ORIGINAL.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 73,
-    "title": "PXL_20240103_203355145.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "filename": "PXL_20240103_203355145.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 74,
-    "title": "IMG_20200101_123345.jpg",
     "filename": "IMG_20200101_123345.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 75,
-    "title": "_DSC0133.jpg",
     "filename": "_DSC0133.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 76,
-    "title": "PXL_20231222_095643830.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "filename": "PXL_20231222_095643830.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 77,
-    "title": "IMG_20200101_122528.jpg",
     "filename": "IMG_20200101_122528.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 78,
-    "title": "PXL_20240511_062849460.NIGHT.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240511_062849460.NIGHT.RAW-02.ORIGINAL.jpg",
     "width": 1024,
     "height": 770
   },
   {
-    "id": 79,
-    "title": "IMG_20190531_213055-2-Pano-2.jpg",
     "filename": "IMG_20190531_213055-2-Pano-2.jpg",
     "width": 1024,
     "height": 288
   },
   {
-    "id": 80,
-    "title": "IMG_20181104_131555.jpg",
     "filename": "IMG_20181104_131555.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 81,
-    "title": "PXL_20240105_190235303.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "filename": "PXL_20240105_190235303.NIGHT.RAW-02.ORIGINAL_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 82,
-    "title": "IMG_20191207_135727.jpg",
     "filename": "IMG_20191207_135727.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 83,
-    "title": "IMG_20200716_114027.jpg",
     "filename": "IMG_20200716_114027.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 84,
-    "title": "PXL_20240413_183755198.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240413_183755198.RAW-02.ORIGINAL.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 85,
-    "title": "PXL_20231211_190349253.NIGHT_Original_TIFF.jpg",
     "filename": "PXL_20231211_190349253.NIGHT_Original_TIFF.jpg",
     "width": 1024,
     "height": 770
   },
   {
-    "id": 86,
-    "title": "IMG_20200716_114345.jpg",
     "filename": "IMG_20200716_114345.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 87,
-    "title": "IMG_20200124_112535.jpg",
     "filename": "IMG_20200124_112535.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 88,
-    "title": "IMG_20200124_112131.jpg",
     "filename": "IMG_20200124_112131.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 89,
-    "title": "PXL_20220803_174003210_Original_TIFF.jpg",
     "filename": "PXL_20220803_174003210_Original_TIFF.jpg",
     "width": 1024,
     "height": 770
   },
   {
-    "id": 90,
-    "title": "PXL_20210919_043510516.jpg",
     "filename": "PXL_20210919_043510516.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 91,
-    "title": "DJI_0130-HDR-2.jpg",
     "filename": "DJI_0130-HDR-2.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 92,
-    "title": "_DSC0392.jpg",
     "filename": "_DSC0392.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 93,
-    "title": "IMG_20181104_162122.jpg",
     "filename": "IMG_20181104_162122.jpg",
     "width": 1024,
     "height": 1024
   },
   {
-    "id": 94,
-    "title": "IMG_20191207_134951.jpg",
     "filename": "IMG_20191207_134951.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 95,
-    "title": "PXL_20231211_185140304.NIGHT_Original_TIFF.jpg",
     "filename": "PXL_20231211_185140304.NIGHT_Original_TIFF.jpg",
     "width": 770,
     "height": 1024
   },
   {
-    "id": 96,
-    "title": "IMG_20191207_133542.jpg",
     "filename": "IMG_20191207_133542.jpg",
     "width": 1024,
     "height": 767
   },
   {
-    "id": 97,
-    "title": "IMG_20181104_133150.jpg",
     "filename": "IMG_20181104_133150.jpg",
     "width": 767,
     "height": 1024
   },
   {
-    "id": 98,
-    "title": "PXL_20240414_220200354.RAW-02.ORIGINAL.jpg",
     "filename": "PXL_20240414_220200354.RAW-02.ORIGINAL.jpg",
     "width": 1024,
     "height": 770
   },
   {
-    "id": 99,
-    "title": "20240105_0468-HDR.jpg",
     "filename": "20240105_0468-HDR.jpg",
     "width": 683,
     "height": 1024
