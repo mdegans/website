@@ -29,9 +29,7 @@ impl Default for Gallery {
                 let cursor = cursor.unwrap_or(0);
                 let items: Vec<_> =
                     data.iter().skip(cursor).take(10).cloned().collect();
-                if !items.is_empty() {
-                    callback(Ok((items, Some(cursor + 10))));
-                }
+                callback(Ok((items, Some(cursor + 10))));
             });
 
         Self { scroll }
@@ -43,14 +41,19 @@ impl Gallery {
         &mut self,
         ui: &mut egui::Ui,
     ) -> egui::scroll_area::ScrollAreaOutput<()> {
-        let height = 300.0;
+        let height = 200.0;
+
+        // We don't need egui_commonmark for this. It's plain text.
+        ui.add_space(16.0);
+        ui.label(include_str!("../assets/gallery.md"));
 
         egui::ScrollArea::vertical()
-            .max_height(ui.available_height() * 0.9)
+            .max_height(ui.available_height() * 0.9 - 32.0)
             .auto_shrink([false, false])
             .show(ui, |ui| {
                 ui.spacing_mut().item_spacing = Vec2::splat(16.0);
                 let item_spacing = ui.spacing().item_spacing.x;
+
                 self.scroll.ui_custom_layout(ui, 10, |ui, start_idx, item| {
                     let total_width = ui.available_width();
 
@@ -72,15 +75,23 @@ impl Gallery {
                         combined_width += item_width;
                     }
 
+                    let scale =
+                        (total_width - item_spacing * (count - 1) as f32) / combined_width;
+
+                    let height = height * scale;
+
                     ui.horizontal(|ui| {
-                        for (idx, item) in item.iter().enumerate().take(count) {
+                        for item in item.iter().take(count) {
+                            let size = Vec2::new(
+                                item.width as f32 * scale,
+                                height,
+                            );
                             let path = format!(
                                 "https://raw.githubusercontent.com/mdegans/website/main/assets/gallery/{}",
                                 item.filename.to_string_lossy()
                             );
-                            let response = ui
-                                .add(egui::Image::new(path))
-                                .on_hover_text(&item.title);
+                            
+                            ui.add_sized(size, egui::Image::new(&path));
                         }
                     });
 

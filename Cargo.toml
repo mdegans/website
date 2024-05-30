@@ -20,7 +20,7 @@ egui_commonmark = { version = "0.16.1", features = ["macros"] }
 log = "0.4"
 
 # for gallery:
-image = { version = "0.25", features = ["jpeg"] }
+image = { version = "0.24", features = ["jpeg"] }
 egui_infinite_scroll = "0.3.0"
 egui_thumbhash = "0.3.0"
 serde_json = "1.0"
