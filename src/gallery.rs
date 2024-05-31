@@ -61,7 +61,7 @@ impl Gallery {
                             item.filename.to_string_lossy()
                         );
 
-                        ui.add_sized([width, height], egui::Image::new(&path)).on_hover_text_at_pointer(path);
+                        ui.add_sized([width, height], egui::Image::new(&path));
                     },
                 )
             });
