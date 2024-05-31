@@ -1,4 +1,4 @@
-use std::path::PathBuf;
+use std::{fmt::format, path::PathBuf};
 
 use egui::Vec2;
 // This is adapted from the egui_infinite_scroll example
@@ -21,6 +21,7 @@ pub struct Gallery {
 impl Gallery {
     pub fn new(json_str: &str) -> Self {
         let data: Vec<Item> = serde_json::from_str(json_str).unwrap();
+        print!("{}", data.len());
         let scroll =
             InfiniteScroll::new().end_loader(move |cursor, callback| {
                 let cursor = cursor.unwrap_or(0);
@@ -60,7 +61,7 @@ impl Gallery {
                             item.filename.to_string_lossy()
                         );
 
-                        ui.add_sized([width, height], egui::Image::new(path));
+                        ui.add_sized([width, height], egui::Image::new(&path)).on_hover_text_at_pointer(path);
                     },
                 )
             });
