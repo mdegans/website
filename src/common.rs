@@ -91,11 +91,12 @@ pub fn hobbies(
     ui: &mut egui::Ui,
     commonmark_cache: &mut CommonMarkCache,
     gallery: &mut Gallery,
+    doggos: &mut Gallery,
 ) {
     egui::CollapsingHeader::new("Hobbies")
         .default_open(false)
         .show(ui, |ui| {
-            hobbies_inner(ui, commonmark_cache, gallery);
+            hobbies_inner(ui, commonmark_cache, gallery, doggos);
         })
         .header_response
         .on_hover_text_at_pointer("Hobbies outside programming.");
@@ -106,6 +107,7 @@ pub fn hobbies_inner(
     ui: &mut egui::Ui,
     commonmark_cache: &mut CommonMarkCache,
     gallery: &mut Gallery,
+    doggos: &mut Gallery,
 ) {
     egui_commonmark::commonmark_str!(
         "Hobbies",
@@ -117,20 +119,32 @@ pub fn hobbies_inner(
     egui::CollapsingHeader::new("Photography")
         .default_open(false)
         .show(ui, |ui| {
+            egui_commonmark::commonmark_str!(
+                "assets/gallery.md",
+                ui,
+                commonmark_cache,
+                "assets/gallery.md"
+            );
             // TODO: Add a gallery of photos.
             gallery.ui(ui);
         })
         .header_response
         .on_hover_text_at_pointer("Some of my photography.");
 
-    markdown_dropdown!(
-        ui,
-        commonmark_cache,
-        dogs,
-        "Dogs",
-        "assets/dogs.md",
-        "My Dogs."
-    );
+    egui::CollapsingHeader::new("Dogs")
+        .default_open(false)
+        .show(ui, |ui| {
+            egui_commonmark::commonmark_str!(
+                "assets/doggos.md",
+                ui,
+                commonmark_cache,
+                "assets/doggos.md"
+            );
+            doggos.ui(ui);
+        })
+        .header_response
+        .on_hover_text_at_pointer("Photos of my dogs.");
+
     markdown_dropdown!(
         ui,
         commonmark_cache,

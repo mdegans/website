@@ -1,17 +1,33 @@
 use egui::include_image;
 use egui_commonmark::CommonMarkCache;
 
-use crate::navbar::{tabs::Tab, ICON_SIZE};
+use crate::{
+    gallery::Gallery,
+    navbar::{tabs::Tab, ICON_SIZE},
+};
 
 /// Central panel
-#[derive(Default, serde::Serialize, serde::Deserialize)]
+#[derive(serde::Serialize, serde::Deserialize)]
 pub struct Panel {
     /// Commonmark cache
     #[serde(skip)]
     commonmark_cache: CommonMarkCache,
-    /// Gallery of images
+    /// Photography Gallery
     #[serde(skip)]
-    gallery: crate::gallery::Gallery,
+    gallery: Gallery,
+    /// Doggo Gallery
+    #[serde(skip)]
+    doggos: Gallery,
+}
+
+impl Default for Panel {
+    fn default() -> Self {
+        Self {
+            commonmark_cache: Default::default(),
+            gallery: Gallery::new(include_str!("../../assets/gallery.json")),
+            doggos: Gallery::new(include_str!("../../assets/doggos.json")),
+        }
+    }
 }
 
 impl Panel {
@@ -57,6 +73,7 @@ impl Panel {
                 ui,
                 &mut self.commonmark_cache,
                 &mut self.gallery,
+                &mut self.doggos,
             );
         });
     }

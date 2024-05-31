@@ -13,15 +13,14 @@ struct Item {
     height: usize,
 }
 
+#[derive(Default)]
 pub struct Gallery {
     scroll: InfiniteScroll<Item, usize>,
 }
 
-impl Default for Gallery {
-    fn default() -> Self {
-        let data: Vec<Item> =
-            serde_json::from_str(include_str!("../assets/gallery.json"))
-                .unwrap();
+impl Gallery {
+    pub fn new(json_str: &str) -> Self {
+        let data: Vec<Item> = serde_json::from_str(json_str).unwrap();
         let scroll =
             InfiniteScroll::new().end_loader(move |cursor, callback| {
                 let cursor = cursor.unwrap_or(0);
@@ -42,10 +41,6 @@ impl Gallery {
         const MAX_COL_WIDTH: usize = 256;
         const SPACING: f32 = 16.0;
 
-        // We don't need egui_commonmark for this. It's plain text.
-        ui.add_space(SPACING);
-        ui.label(include_str!("../assets/gallery.md"));
-
         let response = egui::ScrollArea::vertical()
             .max_height(ui.available_height() - SPACING * 2.0)
             .auto_shrink([false, false])
@@ -61,7 +56,7 @@ impl Gallery {
                         let width = ui.available_width();
                         let height = width * (item.height as f32 / item.width as f32);
                         let path = format!(
-                            "https://raw.githubusercontent.com/mdegans/website/main/assets/gallery/{}",
+                            "https://raw.githubusercontent.com/mdegans/website/main/{}",
                             item.filename.to_string_lossy()
                         );
 
@@ -78,9 +73,8 @@ impl Gallery {
 
 #[cfg(test)]
 mod tests {
-    use std::path::Path;
-
     use super::*;
+    use std::path::Path;
 
     /// Image dimensions helper.
     mod helper {
@@ -93,17 +87,11 @@ mod tests {
         }
     }
 
-    /// This test is just to generate the json for all .jpg files in the
-    /// assets/gallery folder. This should be run whenever new images are added.
-    #[test]
-    #[ignore = "reason: test generates JSON"]
-    fn gallery_json() {
-        const JSON_PATH: &str = "assets/gallery.json";
-        const GALLERY_PATH: &str = "assets/gallery";
+    /// Generate gallery json from a path
+    fn gen_gallery_json(json_path: &str, gallery_path: &str) {
         const CRATE_ROOT: &str = env!("CARGO_MANIFEST_DIR");
-
-        let in_ = Path::new(CRATE_ROOT).join(GALLERY_PATH);
-        let out = Path::new(CRATE_ROOT).join(JSON_PATH);
+        let in_ = Path::new(CRATE_ROOT).join(gallery_path);
+        let out = Path::new(CRATE_ROOT).join(json_path);
 
         let items: Vec<Item> = in_
             .read_dir()
@@ -117,8 +105,11 @@ mod tests {
                 let filename = abspath.file_name().unwrap();
 
                 let (width, height) = helper::image_dimensions(&abspath);
+                let mut root_relpath = PathBuf::from(gallery_path);
+                root_relpath.push(filename);
+
                 Item {
-                    filename: filename.into(),
+                    filename: root_relpath,
                     width,
                     height,
                 }
@@ -127,5 +118,23 @@ mod tests {
 
         let json = serde_json::to_string_pretty(&items).unwrap();
         std::fs::write(out, json).unwrap();
+    }
+
+    /// This test is just to generate the json for all .jpg files in the
+    /// assets/gallery folder. This should be run whenever new images are added.
+    #[test]
+    #[ignore = "reason: test generates JSON"]
+    fn gallery_json() {
+        const JSON_PATH: &str = "assets/gallery.json";
+        const GALLERY_PATH: &str = "assets/gallery";
+        gen_gallery_json(JSON_PATH, GALLERY_PATH);
+    }
+
+    /// This does the same as above, only for the dog photo gallery.
+    #[test]
+    fn doggos_json() {
+        const JSON_PATH: &str = "assets/doggos.json";
+        const GALLERY_PATH: &str = "assets/doggos";
+        gen_gallery_json(JSON_PATH, GALLERY_PATH)
     }
 }
