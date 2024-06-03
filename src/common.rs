@@ -68,6 +68,15 @@ pub fn projects_inner(
         "A Rust library for parsing Jeep JL CAN bus events."
     );
 
+    markdown_dropdown!(
+        ui,
+        commonmark_cache,
+        nvalhalla,
+        "NValhalla",
+        "assets/nvalhalla.md",
+        "A DeepStream social distancing demo for NVIDIA platforms."
+    );
+
     ui.horizontal(|ui| {
         ui.label("More projects:");
         ui.hyperlink("https://github.com/mdegans");
