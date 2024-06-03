@@ -1,4 +1,4 @@
-I enjoy all kinds of video games. They're fun to play and I'm facinated with aspects of game design.
+I enjoy all kinds of video games. They're fun to play and I'm fascinated with aspects of game design.
 
 Most recently I've been playing [Horizon: Forbidden West](https://en.wikipedia.org/wiki/Horizon_Forbidden_West) and [Elden Ring](https://en.wikipedia.org/wiki/Elden_Ring).
 
