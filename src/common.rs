@@ -77,6 +77,15 @@ pub fn projects_inner(
         "A DeepStream social distancing demo for NVIDIA platforms."
     );
 
+    markdown_dropdown!(
+        ui,
+        commonmark_cache,
+        substream,
+        "Substream",
+        "assets/substream.md",
+        "An audio to subtitle transcription tool using Google's TTS."
+    );
+
     ui.horizontal(|ui| {
         ui.label("More projects:");
         ui.hyperlink("https://github.com/mdegans");
