@@ -2,6 +2,7 @@ use egui::include_image;
 use egui_commonmark::CommonMarkCache;
 
 use crate::{
+    blog::Blog,
     gallery::Gallery,
     navbar::{tabs::Tab, ICON_SIZE},
 };
@@ -18,6 +19,9 @@ pub struct Panel {
     /// Doggo Gallery
     #[serde(skip)]
     doggos: Gallery,
+    /// Blog posts
+    #[serde(skip)]
+    blog: Blog,
 }
 
 impl Default for Panel {
@@ -26,6 +30,7 @@ impl Default for Panel {
             commonmark_cache: Default::default(),
             gallery: Gallery::new(include_str!("../../assets/gallery.json")),
             doggos: Gallery::new(include_str!("../../assets/doggos.json")),
+            blog: Blog::new(),
         }
     }
 }
@@ -68,6 +73,7 @@ impl Panel {
 
         egui::ScrollArea::vertical().show(ui, |ui| {
             crate::common::about(ui, &mut self.commonmark_cache);
+            self.blog.ui(ui);
             crate::common::projects(ui, &mut self.commonmark_cache);
             crate::common::hobbies(
                 ui,

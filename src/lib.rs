@@ -6,6 +6,9 @@ pub(crate) mod central;
 /// Gallery of images for Photography section.
 pub(crate) mod gallery;
 
+/// Blog posts.
+pub(crate) mod blog;
+
 /// Common content repeated across multiple pages.
 pub(crate) mod common;
 

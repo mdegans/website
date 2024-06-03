@@ -25,6 +25,9 @@ egui_infinite_scroll = "0.3.0"
 egui_thumbhash = "0.3.0"
 serde_json = "1.0"
 
+# for blog:
+time = "0.3"
+
 # You only need serde if you want app persistence:
 serde = { version = "1", features = ["derive"] }
 
