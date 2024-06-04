@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 
 use super::ICON_SIZE;
 
-pub mod home;
+pub mod info;
 pub mod settings;
 
 pub const ALL: [Tab; 2] = [Tab::Info, Tab::Settings];
@@ -27,7 +27,7 @@ impl Tab {
 
     pub fn default_state(self) -> State {
         match self {
-            Self::Info => State::Home(Default::default()),
+            Self::Info => State::Info(Default::default()),
             Self::Settings => State::Settings(Default::default()),
         }
     }
@@ -47,14 +47,14 @@ impl Tab {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub enum State {
-    Home(home::Home),
+    Info(info::Info),
     Settings(settings::Settings),
 }
 
 impl State {
     pub fn ui(&mut self, ui: &mut egui::Ui) {
         match self {
-            Self::Home(_) => {}
+            Self::Info(info) => info.ui(ui),
             Self::Settings(settings) => settings.ui(ui),
         }
     }
