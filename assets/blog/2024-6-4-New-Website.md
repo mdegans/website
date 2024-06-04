@@ -1,0 +1,7 @@
+So I decided to write a new website, this time in Rust. Why? Because I'm tired of updating wordpress and getting spam comments for a comment section that is supposed to be both disabled and hidden. All for content that might as well be static.
+
+I'm tired of the security issues. So, here we are with a static site because there isn't a reason not to. I write in markdown, which on save triggers `build.rs` which adds and entry in `/src/blog/entries.rs` which is built into the binary, and because text is highly compressible, the binary is small and fast, even storing all the blog entries in memory. All I need to do from there is commit and `git push` and the site is updated.
+
+The markdown is parsed with [`egui-commonmark`](https://docs.rs/egui_commonmark/latest/egui_commonmark/) which creates appropriate widgets. There's also some [infinite scroll](https://docs.rs/egui_infinite_scroll/latest/egui_infinite_scroll/) but there's a small [issue](https://github.com/lucasmerlin/hello_egui/issues/26) where the scroll elements disappear when the window is refreshed. I'll track that down in time.
+
+Eventually I'll grab the blog entries from elsewhere, like static files, but there isn't a reason to do that yet. So far so good. The site is fast and does what I want. I don't really care if scrapers can get to it since they'll just use it to train AI models. It's for human eyes. I could generate html from the markdown as well for scrapers, but I don't care enough to do that yet.
