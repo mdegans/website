@@ -2,7 +2,7 @@
 
 use egui_commonmark::CommonMarkCache;
 
-use crate::gallery::{self, Gallery};
+use crate::gallery::Gallery;
 
 /// Recent projects.
 pub fn projects(ui: &mut egui::Ui, commonmark_cache: &mut CommonMarkCache) {
