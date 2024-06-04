@@ -22,6 +22,8 @@ impl Settings {
                 ui.ctx().clone().memory_ui(ui);
             })
             .header_response
-            .on_hover_text_at_pointer("Memory debugging. Reset gui state, etc.");
+            .on_hover_text_at_pointer(
+                "Memory debugging. Reset gui state, etc.",
+            );
     }
 }
