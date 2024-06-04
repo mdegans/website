@@ -52,7 +52,9 @@ eframe = { version = "0.27.2", default-features = false, features = [
 ] }
 
 [profile.release]
-opt-level = 2 # fast and small wasm
+opt-level = 3
+strip = true
+lto = true
 
 # Optimize all dependencies even in debug builds:
 [profile.dev.package."*"]

@@ -1,1 +1,3 @@
 [build]
+data-wasm-opt = "z"
+minify = "on_release"
