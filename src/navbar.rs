@@ -1,13 +1,12 @@
 use std::collections::HashMap;
 
 use egui::panel::Side;
-use serde::{Deserialize, Serialize};
 
 pub mod tabs;
 
 pub const ICON_SIZE: f32 = 30.0;
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default)]
 pub struct Navbar {
     /// If the navbar is expanded.
     pub expanded: bool,

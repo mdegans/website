@@ -1,5 +1,4 @@
 use egui::include_image;
-use serde::{Deserialize, Serialize};
 
 use super::ICON_SIZE;
 
@@ -8,9 +7,7 @@ pub mod settings;
 
 pub const ALL: [Tab; 2] = [Tab::Info, Tab::Settings];
 
-#[derive(
-    Debug, Clone, Copy, Default, PartialEq, Eq, Hash, Serialize, Deserialize,
-)]
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Hash)]
 pub enum Tab {
     #[default]
     Info,
@@ -45,7 +42,7 @@ impl Tab {
     }
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug)]
 pub enum State {
     Info(info::Info),
     Settings(settings::Settings),
