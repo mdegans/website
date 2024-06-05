@@ -1,10 +1,8 @@
 name: SFTP Deploy to `mdegans.dev`
 
-# By default, runs if you push to main. keeps your deployed app in sync with main branch.
 on:
-  push:
-    branches:
-      - gh-pages
+  repository_dispatch:
+    types: [sftp_deploy]
 
 jobs:
   deploy_job:
