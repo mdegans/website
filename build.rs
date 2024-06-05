@@ -1,4 +1,7 @@
-use std::path::{Path, PathBuf};
+use std::{
+    collections::BTreeSet,
+    path::{Path, PathBuf},
+};
 
 // https://stackoverflow.com/questions/38406793/why-is-capitalizing-the-first-letter-of-a-string-so-convoluted-in-rust
 fn some_kind_of_uppercase_first_letter(s: &str) -> String {
@@ -101,9 +104,14 @@ pub const ENTRIES: &[&Entry] = &[
         .join("entries.rs");
 
     println!("cargo:rerun-if-changed={}/*", in_dir.display());
+    let paths: BTreeSet<_> = in_dir
+        .read_dir()
+        .unwrap()
+        .filter_map(Result::ok)
+        .map(|e| e.path())
+        .collect();
 
-    for entry in in_dir.read_dir().unwrap().filter_map(Result::ok) {
-        let path = entry.path();
+    for path in paths.iter().rev() {
         if path.extension().map_or(false, |ext| ext == "md") {
             let filename = path.file_name().unwrap().to_string_lossy();
             let mut fn_parts = filename.split('-');
