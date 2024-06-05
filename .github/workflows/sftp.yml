@@ -1,0 +1,24 @@
+name: SFTP Deploy to `mdegans.dev`
+
+# By default, runs if you push to main. keeps your deployed app in sync with main branch.
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  deploy_job:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.SSH_USERNAME }}
+          server: ${{ secrets.SSH_HOST}}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: "./*"
+          remote_path: "~/mdegans.dev/"
+          sftpArgs: "-o ConnectTimeout=5"
