@@ -20,5 +20,5 @@ jobs:
           server: ${{ secrets.SSH_HOST}}
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           local_path: "./*"
-          remote_path: "~/mdegans.dev/"
+          remote_path: "mdegans.dev/"
           sftpArgs: "-o ConnectTimeout=5"
