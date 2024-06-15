@@ -78,6 +78,54 @@ pub const ENTRIES: &[&Entry] = &[
     &Entry::new(
         2024,
         6,
+        14,
+        r#"Electrocuting Sharks"#,
+        r#"Yesterday I finished up the force-directed layout for Weave. I've been working on it for a few days now and I'm happy with the results. I've tweaked the parameters to the point where the layout is stable and looks good. There are
+still failure cases, but fewer of them. I'll address them in a separate commit.
+
+Today I fixed a model loading issue. I hadn't extensively tested the model
+loading code and it turned out that it would't load until the app was restarted.
+I fixed that now and changed loading to be asynchronous. Loading now happens
+in a separate thread and the app is usable while it's happening.
+
+As with the OpenAI backend, I'm using channels to communicate between the
+main thread and worker thread. This is a pattern I've used before and it
+works well. I send `Request` objects to the worker thread and it sends
+`Response` objects back. This way I can keep the main ui thread responsive
+no matter what.
+
+To test everything out, I created a few text nodes from the former president's
+recent speech on electrocuting sharks. I was curious to see how well the model
+could predict divergent paths from the ground truth text. Not surprisingly,
+the generated text is nearly indistinguishable from the real thing. Not only
+that, because I framed the text as a WaPo article, the model even generated
+commentary pointing out the logical inconsistencies in the speech.
+
+A screenshot of that is
+[here](https://raw.githubusercontent.com/mdegans/website/main/blog/assets/sharks.png)
+and the JSON to load it into Weave is
+[here](https://raw.githubusercontent.com/mdegans/website/main/blog/assets/sharks.json).
+Note that the json was generated with the dev branch of Weave and may not work
+with the current release.
+"#,
+    ),
+    &Entry::new(
+        2024,
+        6,
+        12,
+        r#"Weave UI Enhancements"#,
+        r#"Today I finished up the force-directed layout for Weave. I've been working on it for a few days now and I'm happy with the results. I've tweaked the parameters to the point where the layout is stable and looks good. There are failure cases, such as when all nodes overlap, but they'll be addressed in a separate commit.
+
+Additionally, I polished up the UI a bit by adding icons as well as adding an in-app trash can for deleted stories. This way it takes more than a single click to delete a story which might have taken a lot of work to create.
+
+Tomorrow, in addition to some resumé updates, I'll be addressing some of the bugs I've found over the past few days as well as the failure cases in the force-directed layout. Likely I'll add random noise to positions that are too close together, or provide an option to randomize the node positions before layout.
+
+Also of issue is the fact that there are some cases where high velocity nodes can end up outside the viewport. This shouldn't happen but it does. I know why but I haven't yet decided on the best way to address it. There is some inconsistency in the way node positions are handled that I need to address.
+"#,
+    ),
+    &Entry::new(
+        2024,
+        6,
         11,
         r#"Weave Force Directed Layout"#,
         r#"Over the past few days I've been adding force-directed layout to Weave. I've had some experience with n-body simulations, but hadn't done anything for graphs. I ended up looking at how Gephi had done it.
