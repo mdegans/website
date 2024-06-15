@@ -20,8 +20,8 @@ that, because I framed the text as a WaPo article, the model even generated
 commentary pointing out the logical inconsistencies in the speech.
 
 A screenshot of that is
-[here](https://raw.githubusercontent.com/mdegans/website/main/blog/assets/sharks.png)
+[here](https://raw.githubusercontent.com/mdegans/website/main/assets/blog/sharks.png)
 and the JSON to load it into Weave is
-[here](https://raw.githubusercontent.com/mdegans/website/main/blog/assets/sharks.json).
-Note that the json was generated with the dev branch of Weave and may not work
+[here](https://raw.githubusercontent.com/mdegans/website/main/assets/blog/sharks.json).
+Note that the JSON was generated with the dev branch of Weave and may not work
 with the current release.
