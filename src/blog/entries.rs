@@ -78,6 +78,20 @@ pub const ENTRIES: &[&Entry] = &[
     &Entry::new(
         2024,
         6,
+        15,
+        r#"Weave Force Directed Layout Fixes"#,
+        r#"Today I made a few more fixes to the force-directed layout. Previously, the time step was a constant, but now it's based on the actual frame time. Now It's possible to drag the window from a 120hz screen to a 60hz screen without affecting the simulation.
+
+Debug view comes in handy for this. Currently drawn are the node rectangle (plus padding), the gravitational centroids, and the velocity of each node. A green centroid is the global, red local, and yellow, the weighted average. Velocity is represented as a red edge around each node. The direction is not shown, only the magnitude, but this will probably change in the future.
+
+![Debug view](https://raw.githubusercontent.com/mdegans/website/main/assets/blog/force-directed-layout-debug.png)
+
+A slider has also been added to control a speed multiplier. This is useful in situations where the simulation is too slow or too fast. The feature is almost bug-free. After that there are a few crashes and outstanding issues on the tracker before the next release but compared to last week this is a much better place to be in.
+"#,
+    ),
+    &Entry::new(
+        2024,
+        6,
         14,
         r#"Electrocuting Sharks"#,
         r#"Yesterday I finished up the force-directed layout for Weave. I've been working on it for a few days now and I'm happy with the results. I've tweaked the parameters to the point where the layout is stable and looks good. There are
@@ -102,10 +116,10 @@ that, because I framed the text as a WaPo article, the model even generated
 commentary pointing out the logical inconsistencies in the speech.
 
 A screenshot of that is
-[here](https://raw.githubusercontent.com/mdegans/website/main/blog/assets/sharks.png)
+[here](https://raw.githubusercontent.com/mdegans/website/main/assets/blog/sharks.png)
 and the JSON to load it into Weave is
-[here](https://raw.githubusercontent.com/mdegans/website/main/blog/assets/sharks.json).
-Note that the json was generated with the dev branch of Weave and may not work
+[here](https://raw.githubusercontent.com/mdegans/website/main/assets/blog/sharks.json).
+Note that the JSON was generated with the dev branch of Weave and may not work
 with the current release.
 "#,
     ),
